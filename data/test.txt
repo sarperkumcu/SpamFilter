@@ -1,0 +1,6 @@
+1,franz,10
+2,kafka,11
+3,sarper,45
+4,milan,25
+5,kundera,30
+6,tolstoy,37
