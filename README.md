@@ -7,7 +7,7 @@ This project created to cover fundamentals of spark, hadoop and ML.
 git clone https://github.com/sarperkumcu/SpamFilter.git
 ```
 
-## Installation
+## Frameworks
 
 - Kafka was used as a pipeline between local file system and hadoop file system. 
 - NLTK was used for preprocess and train model.
