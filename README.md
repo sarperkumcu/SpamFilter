@@ -9,8 +9,8 @@ git clone https://github.com/sarperkumcu/SpamFilter.git
 
 ## Installation
 
--Kafka was used as a pipeline between local file system and hadoop file system. 
--NLTK was used for preprocess and train model.
+- Kafka was used as a pipeline between local file system and hadoop file system. 
+- NLTK was used for preprocess and train model.
 
 ## Prerequirements
 
