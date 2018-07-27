@@ -1,0 +1,7 @@
+HAM_DATA = "data/enron1/ham/"
+SPAM_DATA = "data/enron1/spam/"
+SERVER = "localhost:9092"
+HDFS_HAM_DATA_PATH = "hdfs://localhost/ham/"
+HDFS_SPAM_DATA_PATH = "hdfs://localhost/spam/"
+SPAM_TOPIC = "spam"
+HAM_TOPIC = "ham"

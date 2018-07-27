@@ -3,7 +3,7 @@ from nltk.corpus import stopwords
 from collections import Counter
 class Preprocess:
     def preprocess(self,sentence):
-        tokens = word_tokenize(sentence.decode(errors='replace'))
+        tokens = word_tokenize(sentence)
         lemmatizer = WordNetLemmatizer()
         return [lemmatizer.lemmatize(word.lower()) for word in tokens]
 

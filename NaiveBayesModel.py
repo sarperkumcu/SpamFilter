@@ -1,10 +1,18 @@
 from DataLoader import *
 from Preprocess import *
+import random
+
+from operator import is_not
 from nltk import NaiveBayesClassifier, classify
+from functools import partial
 class NaiveBayesModel:
     def run(self):
-        spam,ham,total = DataLoader.getMails(self)
-        features = [(Preprocess.get_features(self,email,''),label) for (email,label) in total]
+        spam = DataLoader.getSpamDataFromHDFS(self)
+        ham = DataLoader.getHamDataFromHDFS(self)
+        features_spam = [(Preprocess.get_features(self,email,''),'spam') for (email) in spam ]
+        features_ham = [(Preprocess.get_features(self,email,''),'ham') for (email) in ham ]
+        features = features_ham + features_spam
+        random.shuffle(features)
         train_set,test_set,classifier = self.train(features,0.8)
         self.evaluate(train_set, test_set, classifier)
 
