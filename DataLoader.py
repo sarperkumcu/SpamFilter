@@ -24,7 +24,7 @@ class DataLoader:
     def getSpamDataFromHDFS(self):
         self.spark = SparkSession \
             .builder \
-            .appName("RDD to DF example") \
+            .appName("SpamFilter") \
             .config(conf=SparkConf()) \
             .getOrCreate()
         self.sc = self.spark.sparkContext
@@ -35,7 +35,7 @@ class DataLoader:
     def getHamDataFromHDFS(self):
         self.spark = SparkSession \
             .builder \
-            .appName("RDD to DF example") \
+            .appName("SpamFilter") \
             .config(conf=SparkConf()) \
             .getOrCreate()
         self.sc = self.spark.sparkContext
